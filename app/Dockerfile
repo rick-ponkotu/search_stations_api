@@ -13,6 +13,7 @@ WORKDIR /go/src/app
 ADD . /go/src/app
 
 RUN go get -u github.com/go-sql-driver/mysql
+RUN go get -u github.com/rs/cors
 
 #realizeするときはGO111MODULE=offにする
 RUN GO111MODULE=off go get -u github.com/oxequa/realize
