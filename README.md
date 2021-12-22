@@ -19,7 +19,7 @@ Station data were obtained from https://ekidata.jp.
 
 ```
 {
-  "selected_stations":
+  "selected_stations": 
     [
       {
         "station_name": string,
