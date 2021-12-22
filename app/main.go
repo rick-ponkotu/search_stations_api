@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/rs/cors"
 )
 
 func main() {
@@ -29,5 +30,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/stations", h.ServeHTTP)
 	mux.HandleFunc("/hello", hh.ServeHTTP)
-	log.Fatal(http.ListenAndServe(port, mux))
+	handler := cors.Default().Handler(mux)
+	log.Fatal(http.ListenAndServe(port, handler))
 }
