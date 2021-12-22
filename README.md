@@ -10,8 +10,8 @@ Station data were obtained from https://ekidata.jp.
 ```
 {
   "limit_distance": number,
-  "lon": number, //latitude
-  "lat": number, //longitude
+  "lon": number, //longitude
+  "lat": number, //latitude
 }
 ```
 
